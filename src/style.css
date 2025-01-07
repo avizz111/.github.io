@@ -7,6 +7,8 @@
 body{
     background-color: #ffd7bc;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 header{
@@ -14,31 +16,26 @@ header{
     width: 100vw;
     display: flex;
     justify-content: space-evenly;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
 }
 
-header>img{
-    width: 20vw;
-    height: 20vw;
-    filter: none;
-}
-
-h1>pre{
+h1{
     font-family: cursive;
-    font-weight: 100;
-    display: inline;
+    color: transparent;
+    -webkit-text-stroke: 0.2vw #fff ;
     font-size: 5vw;
-    line-height: 2vw;
 }
 
 @font-face {
-    font-family: family;
+    font-family: cursive;
     src: url(font/CasualCursive-Regular.ttf);
 }
 
 article{
     width: 50vw;
     background-color: #ffaa71;
-    margin: 5vw;
+    margin: 10vw;
     float: right;
     text-align: center;
     border-radius: 30px;
@@ -46,6 +43,12 @@ article{
     padding: 5vw;
     font-family: cursive;
     font-weight: 100;
+    transition: all 1s;
+    position: relative;
+}
+
+article:hover{
+    transform: translateY(-5vw) scale(1.2);
 }
 
 h2{
@@ -59,4 +62,85 @@ article:nth-child(even){
 img{
     width: 100%;
     filter: drop-shadow(2vw 2vw 5px #0c0c0cbb);
+}
+
+footer>*{
+    text-align: center;
+    margin: 2%;
+}
+
+footer{
+    width: 100vw;
+    bottom: 0;
+    display: block;
+    background-color: #ff8534;
+}
+
+main{
+    display: block;
+}
+
+#peligros{
+    float: inline-start;
+    width: 80vw;
+    font-size: 3vw;
+}
+
+iframe{
+    width: 40vw;
+    height: 30vw;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    border-radius: 20px;
+    border: #ff7c24 5px solid;
+    margin-bottom: 4vw;
+    animation: shake 3s infinite;
+}
+
+iframe:nth-child(1){
+    animation: shake 3s 1.5s infinite;
+}
+
+@keyframes shake {
+    0%{
+        transform: translateX(10px);
+    }
+    5%{
+        transform: translateX(-10px);
+    }
+    10%{
+        transform: translateX(10px);
+    }
+    15%{
+        transform: translateX(-10px);
+    }
+    20%{
+        transform: translateX(10px);
+    }
+    25%{
+        transform: translateX(-10px);
+    }
+    30%{
+        transform: translateX(10px);
+    }
+    35%{
+        transform: translateX(-10px);
+    }
+    40%{
+        transform: translateX(10px);
+    }
+    45%{
+        transform: translateX(-10px);
+    }
+    50%{
+        transform: translateX(10px);
+    }
+    55%{
+        transform: translate(0);
+    }
+}
+
+a{
+    text-decoration: none;
+    color: #000;
 }
